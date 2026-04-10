@@ -19,7 +19,3 @@ services:
         value: WARNING
       - key: FRONTEND_BASE_URL
         value: https://cv-matcher.onrender.com
-    disk:
-      name: resume-data
-      mountPath: /app/backend/data
-      sizeGB: 1
