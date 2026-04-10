@@ -8,8 +8,8 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // Allow the login page and its POST action
-  if (request.nextUrl.pathname === '/login') {
+  // Allow the login page and health check (needed for Render/Docker health probes)
+  if (request.nextUrl.pathname === '/login' || request.nextUrl.pathname === '/api/v1/health') {
     return NextResponse.next();
   }
 
