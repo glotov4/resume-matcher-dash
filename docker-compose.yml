@@ -31,6 +31,8 @@ services:
       - LLM_API_BASE=${LLM_API_BASE:-}
       # CORS origins (JSON array format). FRONTEND_BASE_URL is auto-included.
       #- CORS_ORIGINS=["http://localhost:3000","http://127.0.0.1:3000"]
+      # Password protection (leave empty to disable)
+      - APP_PASSWORD=${APP_PASSWORD:-}
     restart: unless-stopped
 
 #secrets:
